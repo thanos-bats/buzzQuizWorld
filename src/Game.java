@@ -3,29 +3,17 @@ import java.util.ArrayList;
 
 
 public class Game {
-    
-    int players;
-    ArrayList<String> questions;
+    private ArrayList<String> questions;
+    private Player[] players;
 
-    public Game(int players) {
-        this.players = players;
+    public Game(int num) {
         questions = new ArrayList<String>();
-        System.out.print("number of players:" + players);
-
+        setGamesPlayers(num);
     }
 
-    public void setGamesPlayers(int players) {
-        for (int i=1; i<=players; i++) {
-            Player p = new Player(i);
-        
+    public void setGamesPlayers(int num) {
+        for (int i = 0; i < num; i++) {
+            this.players[i] = new Player(i + 1);
         }
     }
- 
-     
-    /*
-    public static void main(String [] args) {
-        Game g = new Game(1);
-        
-    } */ 
-
 }

@@ -1,16 +1,15 @@
 
 
 public class Player {
-    public int num;
-    public int CorrectAnswers;
-    public int HighScore;
+    private int id;
+    private int CorrectAnswers;
+    private int HighScore;
     /*for multiplayer*/
-    public int wins;
+    private int wins;
 
     
-    public Player(int num) {
-        this.num = num; 
+    public Player(int id) {
+        this.id = id;
         this.CorrectAnswers = 0;
-
     }
 }
