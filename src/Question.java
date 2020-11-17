@@ -21,6 +21,6 @@ public class Question {
     }
 
     public String[] getAnswers() {
-        return this.answers;
+        return answers;
     }
 }
