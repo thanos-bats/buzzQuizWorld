@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random; 
 
 
@@ -6,9 +7,19 @@ public class QuestionPool {
     public ArrayList<Question> pool;
 
 
+
+    public void getPool() {
+       // Random rand = new Random();
+        for (Question q : pool) {
+            System.out.println(q.getQuestion());
+            System.out.println(Arrays.toString(q.getAnswers()));
+        }
+    }
+
     public QuestionPool() {
         this.pool = new ArrayList<Question>();
         addQuestion();
+        
     }
 
     public void addQuestion() {
@@ -20,12 +31,11 @@ public class QuestionPool {
                                     2,
                                 new String[] {"Lake Kerkini","Caspian sea","Lake Superior","Lake Victoria"}));
     
-    
         pool.add(new Question("Where would you find the Sea of Tranquility?",
                                     3,
-                                new String[] {"In Asia","The Earth","The Mars","The Moon"}));
-
-       pool.add(new Question("What is someone who shoes horses called?",
+                                    new String[] {"In Asia","The Earth","The Mars","The Moon"}));
+        
+        pool.add(new Question("What is someone who shoes horses called?",
                                 0,
                                 new String[] {"A farrier","A human","A painter","A farmer"}));
 
@@ -51,7 +61,7 @@ public class QuestionPool {
 
         pool.add(new Question("Which is the most populated country in the world?",
                                 3,
-                                new String[] {"India","Bagladesh","China","Thailand  "}));
+                                new String[] {"India","Bagladesh","China","Thailand"}));
 
      }
 
