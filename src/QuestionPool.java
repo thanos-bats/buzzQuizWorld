@@ -9,11 +9,11 @@ public class QuestionPool {
     }
 
     public void addQuestion() {
-        Question q1 = new Question("dskjsd", 1, "fdbdfb");
-        pool.add(q1);
-        Question q2 = new Question("Who was the legendary Benedictine monk who invented champagne?", 1, "Dom Perignon Brandley James Alice Cooper Maria Alisson");
-        pool.add(q2);
-    }
 
+        
+        pool.add(new Question("Which year Aris fc played at UCL",
+                                    0,
+                                    new String[] {"Never","1982","1244","2019"}));
+    }
 
 }
