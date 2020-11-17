@@ -11,4 +11,16 @@ public class Question {
         this.rightAnswerIdx = rightAnswerIdx;
         this.answers  = answers;
     }
+
+    public String getQuestion() {
+        return this.question;
+    }
+
+    public int getRightAnswerIdx() {
+        return this.rightAnswerIdx;
+    }
+
+    public String[] getAnswers() {
+        return this.answers;
+    }
 }
