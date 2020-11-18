@@ -3,10 +3,5 @@ public class Main {
         System.out.println("Hello, let's play Buzz!");
 
         Game g = new Game(1, 2, 2);
-
-    
-    
-    
-    
     }
 }
