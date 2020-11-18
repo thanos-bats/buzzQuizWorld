@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-
-
 public class Question {
     private final String question;
     private final int rightAnswerIdx;
@@ -16,11 +13,14 @@ public class Question {
         return this.question;
     }
 
-    public int getRightAnswerIdx() {
-        return this.rightAnswerIdx;
-    }
+    public int getRightAnswerIdx() { return this.rightAnswerIdx; }
 
-    public String[] getAnswers() {
-        return answers;
+    public String[] getAnswers() { return answers; }
+
+    public boolean checkRightAnswer(int index) {
+        if (index == this.rightAnswerIdx) {
+            return true;
+        }
+        return false;
     }
 }
