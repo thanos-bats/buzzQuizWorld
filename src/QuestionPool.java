@@ -12,7 +12,8 @@ public class QuestionPool {
 
     public Question getRandomQuestion() {
         Question randomQ;
-        Random rn = new Random();int randint = Math.abs(rn.nextInt()) % (pool.size() - 1);
+        Random rn = new Random();
+        int randint = Math.abs(rn.nextInt()) % (pool.size() - 1);
         randomQ =  pool.get(randint);
         this.deleteQuestion(randint);
         return randomQ;
@@ -32,43 +33,43 @@ public class QuestionPool {
 
     public void initPool() {
         pool.add(new Question("Who was the legendary Benedictine monk who invented champagne?",
-                                    0,
+                    "Dom Perignon",
                                 new String[] {"Dom Perignon","Brandley James","Alice Cooper","Maria Alisson"}));
 
         pool.add(new Question("Name the largest freshwater lake in the world?",
-                                    2,
+                    "Lake Superior",
                                 new String[] {"Lake Kerkini","Caspian sea","Lake Superior","Lake Victoria"}));
     
         pool.add(new Question("Where would you find the Sea of Tranquility?",
-                                    3,
-                                    new String[] {"In Asia","The Earth","The Mars","The Moon"}));
+                    "In Asia",
+                                new String[] {"In Asia","The Earth","The Mars","The Moon"}));
         
         pool.add(new Question("What is someone who shoes horses called?",
-                                0,
+                    "A farrier",
                                 new String[] {"A farrier","A human","A painter","A farmer"}));
 
         pool.add(new Question("What kind of weapon is a falchion?",
-                                3,
+                    "A Rpg",
                                 new String[] {"A BB Gun","A Fire Gun","A Rpg","A sword"}));
                                 
         pool.add(new Question("Name the seventh planet from the sun.",
-                                2,
+                    "Mars",
                                 new String[] {"Zeus","Mars","Uranus","Aphrodite"}));
 
         pool.add(new Question("Which is the Capital city of Argentina?",
-                                    1,
+                    "Buenos Aires",
                                 new String[] {"Paris","Buenos Aires","Madrit","Oslo"}));
                                
         pool.add(new Question("Which is the biggest island of Greece",
-                                0,
+                    "Creta",
                                 new String[] {"Creta","Rhodes","Evoia","Lesvos"}));
 
         pool.add(new Question("When Liverpool won UCL last time?",
-                                2,
+                    "2019",
                                 new String[] {"1998","1982","2019","2016"}));
 
         pool.add(new Question("Which is the most populated country in the world?",
-                                3,
+                    "China",
                                 new String[] {"India","Bagladesh","China","Thailand"}));
      }
 
