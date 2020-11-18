@@ -1,28 +1,36 @@
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Random; 
+import java.util.Random;
 
 
 public class QuestionPool {
     public ArrayList<Question> pool;
 
-
-
-    public void getPool() {
-       // Random rand = new Random();
-        for (Question q : pool) {
-            System.out.println(q.getQuestion());
-            System.out.println(Arrays.toString(q.getAnswers()));
-        }
-    }
-
     public QuestionPool() {
-        this.pool = new ArrayList<Question>();
-        addQuestion();
-        
+        this.pool = new ArrayList<>();
+        this.initPool();
     }
 
-    public void addQuestion() {
+    public Question getRandomQuestion() {
+        Question randomQ;
+        Random rn = new Random();int randint = Math.abs(rn.nextInt()) % (pool.size() - 1);
+        randomQ =  pool.get(randint);
+        this.deleteQuestion(randint);
+        return randomQ;
+    }
+
+    public Question[] getXQuestions(int num) {
+        Question[] q = new Question[num];
+        for (int i = 0; i < num; i++) {
+            q[i] = this.getRandomQuestion();
+        }
+        return  q;
+    }
+
+    public void deleteQuestion(int i) {
+        this.pool.remove(i);
+    }
+
+    public void initPool() {
         pool.add(new Question("Who was the legendary Benedictine monk who invented champagne?",
                                     0,
                                 new String[] {"Dom Perignon","Brandley James","Alice Cooper","Maria Alisson"}));
@@ -62,7 +70,6 @@ public class QuestionPool {
         pool.add(new Question("Which is the most populated country in the world?",
                                 3,
                                 new String[] {"India","Bagladesh","China","Thailand"}));
-
      }
 
 }
