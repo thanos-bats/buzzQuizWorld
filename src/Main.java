@@ -1,7 +1,11 @@
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello, let's play Buzz!");
+import java.io.*;
+import java.util.Scanner;
 
-        Game g = new Game(1, 2, 2);
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        Cli ui = new Cli();
+        Game g = new Game(ui);
+
     }
 }
