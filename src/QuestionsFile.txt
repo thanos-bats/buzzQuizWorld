@@ -1,0 +1,11 @@
+Ερώτηση, Απάντηση1, Απάντηση2, Απάντηση3, Απάντηση4, Σωστή_Απάντηση
+Who was the legendary Benedictine monk who invented champagne?,Dom Perignon,Brandley James,Alice Cooper,Maria Alisson,Dom Perignon
+Name the largest freshwater lake in the world?,Lake Kerkini,Caspian sea,Lake Superior,Lake Victoria,Lake Superior
+Where would you find the Sea of Tranquility?,In Asia,The Africa,The Mars,The Moon,In Asia
+What is someone who shoes horses called?,A farrier,A human,A painter,A farmer,A farrier
+What kind of weapon is a falchion?,A BB Gun,A Fire Gun,A Rpg,A sword,A Rpg
+Name the seventh planet from the sun.,Zeus,Mars,Uranus,Aphrodite,Mars
+Which is the Capital city of Argentina?,Paris,Buenos Aires,Madrit,Oslo,Buenos Aires
+Which is the biggest island of Greece?,Creta,Rhodes,Evoia,Lesvos,Creta
+When Liverpool won UCL last time?,1998,1982,2019,2006,2019
+Which is the most populated country in the world?,India,Bagladesh,China,Thailand,China
