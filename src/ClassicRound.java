@@ -3,8 +3,8 @@ public class ClassicRound extends Round {
     Cli cli = new Cli();
     private int score = 0;    
     
-    public ClassicRound() {
-        super(roundQuestions, ui);
+    public ClassicRound(Question[] q, View ui) {
+        super(q, ui);
         checkIfIsRight();
         
 
