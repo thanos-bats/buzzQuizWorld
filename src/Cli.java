@@ -38,5 +38,4 @@ public class Cli implements View {
             i++;
         }
     }
-
 }

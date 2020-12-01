@@ -1,4 +1,6 @@
 import java.io.*;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
@@ -13,8 +15,8 @@ public class QuestionPool {
     }
 
     public void initPool() throws IOException {
-        File file = new File(System.getProperty("QuestionsFile.txt"));
-
+        Path currentRelativePath = Paths.get("QuestionsFile.txt");
+        File file = new File(currentRelativePath.toAbsolutePath().toString());
         BufferedReader br = new BufferedReader(new FileReader(file));
         br.readLine(); // this will read the first line
 
