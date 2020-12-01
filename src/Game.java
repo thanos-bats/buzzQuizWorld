@@ -27,6 +27,6 @@ public class Game {
     }
 
     public void initRound(int numRound) {
-        this.rounds[numRound] = new Round(this.pool.getXQuestions(numOfQuestions));
+        this.rounds[numRound] = new Round(this.pool.getXQuestions(numOfQuestions),ui);
     }
 }
