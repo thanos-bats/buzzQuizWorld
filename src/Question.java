@@ -1,9 +1,9 @@
 import java.util.*;
 
 public class Question {
-    private final String question;
-    private final String rightAnswer;
-    private String[] answers;
+    protected final String question;
+    protected final String rightAnswer;
+    protected String[] answers;
 
     public Question(String question, String rightAnswer, String[] answers) {
         this.question = question;
@@ -22,5 +22,5 @@ public class Question {
         return this.answers;
     }
 
-    public boolean checkRightAnswer(String answer) { return this.answers.equals(answer); }
+    public boolean checkRightAnswer(String answer) { return this.rightAnswer.equals(answer); }
 }
