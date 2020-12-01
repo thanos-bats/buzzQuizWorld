@@ -1,18 +1,23 @@
+import java.io.IOException;
 
-public class Game {     
+public class Game {
+    private final int numOfRounds = 4;
+    private final int numOfQuestions = 4;
+
+    private View ui;
+    private QuestionPool pool;
     private Player[] players;
     private Round[] rounds;
-    private QuestionPool pool;
 
 
-    public Game(int numberOfPlayers,int numberOfRounds, int numberOfQuestions) {
+    public Game(View ui) throws IOException {
+        this.ui = ui;
         pool = new QuestionPool();
 
-        players = new Player[numberOfPlayers];
-        this.addPlayers(numberOfPlayers);
+        players = new Player[1];
+        this.addPlayers(1);
 
-        rounds = new Round[numberOfQuestions];
-
+        rounds = new Round[numOfRounds];
     }
 
     public void addPlayers(int num) {
@@ -22,6 +27,6 @@ public class Game {
     }
 
     public void initRound(int numRound) {
-        this.rounds[numRound] = new Round(this.pool.getXQuestions(this.rounds.length));
+        this.rounds[numRound] = new Round(this.pool.getXQuestions(numOfQuestions));
     }
 }
