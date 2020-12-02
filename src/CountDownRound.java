@@ -35,7 +35,12 @@ public class CountDownRound  extends Round {
     
     
 
-    
+    public boolean answerValidation(int answer) {
+        if (answer != 1 ||  answer != 2 || answer != 3 || answer != 4) {
+            return false; 
+        }
+        return true;
+    }
 
     
     
