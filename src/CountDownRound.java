@@ -32,7 +32,20 @@ public class CountDownRound  extends Round {
         
     }
 
-    
+    public void checkIfIsRight() {
+        for (Question q : roundQuestions) {
+            cli.showQuestion(q);
+            start();
+            cli.readAnswer();
+            if (answerValidation(cli.readAnswer())) {
+                timer.cancel();
+            }
+            
+            System.out.println(secondsPassed);
+
+            
+        }
+    }
     
 
     public boolean answerValidation(int answer) {
@@ -42,7 +55,7 @@ public class CountDownRound  extends Round {
         return true;
     }
 
-    
+
     
     
 }
