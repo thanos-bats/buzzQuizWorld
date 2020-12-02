@@ -55,6 +55,14 @@ public class CountDownRound  extends Round {
         return true;
     }
 
+    public static void main(String[] args ) {
+        Question[] q = new Question[4];
+        CountDownRound n = new CountDownRound(q, ui);
+        n.start();        
+
+
+
+    }
 
     
     
