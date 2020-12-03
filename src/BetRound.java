@@ -4,7 +4,6 @@ public class BetRound extends Round {
 
     private int betscore = 1000;
     private int bet;
-    Cli cli = new Cli();
     
     public BetRound(Question[] q, View ui) {
         super(q, ui);
@@ -13,7 +12,7 @@ public class BetRound extends Round {
 
     public void checkIfIsRight() {
         for (Question q : roundQuestions) {
-            cli.showQuestion(q);
+            ui.showQuestion(q);
             System.out.println("How many point do you want to bet? 250 , 500 , 750 , 1000");
             
             Scanner sc = new Scanner(System.in);
@@ -23,7 +22,7 @@ public class BetRound extends Round {
             
             betscore -= bet;    // I will create a function which updates score;
             
-            if (q.checkRightAnswer(q.answers[cli.readAnswer() + 1])) {
+            if (q.checkRightAnswer(q.answers[ui.readAnswer() + 1])) {
                 System.out.println("Correct, You earned your bet points"); 
                 betscore += bet;
             }
