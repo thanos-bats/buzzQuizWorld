@@ -1,10 +1,14 @@
 import java.util.ArrayList;
 
 public class Round {
-    private Question[] roundQuestions;
 
-    public Round(Question[] q) {
+    protected static Question[] roundQuestions;
+    protected static View ui;
+    
+    public Round(Question[] q, View ui) {
         roundQuestions = q;
+        Round.ui = ui;
+    
     }
 
 }
