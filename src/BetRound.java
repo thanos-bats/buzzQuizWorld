@@ -4,7 +4,6 @@ public class BetRound extends Round {
 
     private int betscore = 1000;
     private int bet;
-    Cli cli = new Cli();
     
     public BetRound(Question[] q, View ui) {
         super(q, ui);

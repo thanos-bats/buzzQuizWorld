@@ -1,13 +1,11 @@
 public class ClassicRound extends Round {
     //Mabe useless 
-    Cli cli = new Cli();
-    private int score = 0;    
+
+    private long score = 0.0;    
     
     public ClassicRound(Question[] q, View ui) {
         super(q, ui);
         checkIfIsRight();
-        
-
     }
 
     public void checkIfIsRight() {
@@ -15,7 +13,7 @@ public class ClassicRound extends Round {
             cli.showQuestion(q);
             if (q.checkRightAnswer(q.answers[cli.readAnswer() + 1])) {
                 System.out.println("Correct, You earned 1000 points"); //Mabe it will be to the interface
-                score +=1000;
+                score +=1000.0;
             }
             System.out.println("You answer is wrong!!!"); //Mabe it will be to the interface
         }      
