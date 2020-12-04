@@ -23,7 +23,7 @@ public class QuestionPool {
         String str= null;
         while ((str = br.readLine()) != null) {
             String[] line = str.split(",");
-            pool.add(new Question(line[0], line[1], new String[] {line[2], line[3], line[4], line[5]}));
+            pool.add(new Question(line[0], line[1], new String[] {line[2], line[3], line[4], line[5]}, line[6]));
         }
     }
 
