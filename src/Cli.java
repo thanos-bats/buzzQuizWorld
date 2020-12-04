@@ -23,7 +23,11 @@ public class Cli implements View {
         Scanner sc = new Scanner(System.in);
         int an;
         do {
+            System.out.println("Write your answer here -> ");
             an = sc.nextInt();
+            if (an < 1 || an > 4) {
+                System.out.println("Please write 1,2,3 or 4");
+            }
         } while (an != 1 && an != 2 && an != 3 && an != 4);
 
         return an;
@@ -37,5 +41,10 @@ public class Cli implements View {
             System.out.println(i + " " + an);
             i++;
         }
+    }
+
+    @Override
+    public void showMessage(String message) {
+        System.out.println(message);
     }
 }
