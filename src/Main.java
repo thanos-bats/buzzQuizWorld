@@ -1,11 +1,10 @@
 import java.io.*;
-import java.util.Scanner;
+import java.lang.reflect.InvocationTargetException;
 
 
 public class Main {
-    public static void main(String[] args) throws IOException, ClassNotFoundException {
+    public static void main(String[] args) throws IOException {
         Cli ui = new Cli();
         Game g = new Game(ui);
-
     }
 }
