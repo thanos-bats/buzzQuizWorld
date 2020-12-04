@@ -31,9 +31,6 @@ public class BetRound extends Round {
 
         return currentscore;
     }
-
-    
-    
 }
     
 
