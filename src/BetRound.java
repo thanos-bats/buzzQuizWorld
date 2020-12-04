@@ -12,7 +12,7 @@ public class BetRound extends Round {
             int bet;
 
             ui.showQuestion(q);
-            ui.showMessage("How many point do you want to bet? 250 , 500 , 750 , 1000");
+            ui.showMessage("How many points do you want to bet? 250 , 500 , 750 , 1000");
 
             Scanner sc = new Scanner(System.in);
             do {
