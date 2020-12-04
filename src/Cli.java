@@ -31,8 +31,8 @@ public class Cli implements View {
 
     @Override
     public void showQuestion(Question q) {
-        System.out.println(q.getQuestion());
         System.out.println(q.getCategory());
+        System.out.println(q.getQuestion());
         int i = 1;
         for (String an : q.getAnswers()) {
             System.out.println(i + " " + an);
