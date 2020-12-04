@@ -1,9 +1,9 @@
 import java.util.*;
 
 public class Question {
-    protected final String question;
-    protected final String rightAnswer;
-    protected String[] answers;
+    private final String question;
+    private final String rightAnswer;
+    private String[] answers;
 
     public Question(String question, String rightAnswer, String[] answers) {
         this.question = question;
