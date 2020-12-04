@@ -6,8 +6,8 @@ public class CountDownRound  extends Round {
 
     private int secondsPassed = 5;
     
-    public CountDownRound(Question[] q, View ui) {
-        super(q, ui);
+    public CountDownRound(Question[] q, View ui, double currentscore) {
+        super(q, ui, currentscore);
     }
  
     Timer timer = new Timer();
@@ -49,7 +49,7 @@ public class CountDownRound  extends Round {
 
     public static void main(String[] args ) {
         Question[] q = new Question[4];
-        CountDownRound n = new CountDownRound(q, ui);
+        CountDownRound n = new CountDownRound(q, ui, currentscore);
         n.start();
     }    
 }

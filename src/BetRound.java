@@ -4,9 +4,10 @@ public class BetRound extends Round {
 
     public BetRound(Question[] q, View ui, double currentscore) {
         super(q, ui, currentscore);
+        runRound();
     }
 
-    public double run() {
+    public double runRound() {
         for (Question q : roundQuestions) {
             int bet;
 
