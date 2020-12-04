@@ -27,7 +27,7 @@ public class CountDownRound  extends Round {
         timer.schedule(task, 1000, 1000);    
     }
 
-    public void checkIfIsRight() {
+    public void runRound() {
         for (Question q : roundQuestions) {
             ui.showQuestion(q);
             ui.readAnswer();
