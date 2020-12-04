@@ -11,4 +11,7 @@ public class Player {
 
     public void updateScore(double points) { this.score += points; }
 
+    public double getScore() {return this.score;}
+
+
 }
