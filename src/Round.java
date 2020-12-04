@@ -1,3 +1,8 @@
+/* 
+   *Round Class implements a new Round of Questions
+   *Class accept as a definition an Array of Question, a View Ui and a variable integer for the current score
+ */
+
 public class Round {
 
     protected static Question[] roundQuestions;
