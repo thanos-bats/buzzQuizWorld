@@ -2,7 +2,6 @@ import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Random;
 
 
@@ -20,10 +19,10 @@ public class QuestionPool {
         BufferedReader br = new BufferedReader(new FileReader(file));
         br.readLine(); // this will read the first line
 
-        String str= null;
+        String str;
         while ((str = br.readLine()) != null) {
             String[] line = str.split(",");
-            pool.add(new Question(line[0], line[1], new String[] {line[2], line[3], line[4], line[5]}, line[6]));
+            pool.add(new Question(line[0], line[5], new String[] {line[1], line[2], line[3], line[4]}, line[6]));
         }
     }
 

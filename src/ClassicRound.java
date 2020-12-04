@@ -1,21 +1,20 @@
 public class ClassicRound extends Round {
 
-    private long score =  0;
-    
-    public ClassicRound(Question[] q, View ui) {
-        super(q, ui);
-        runRound();
+    public ClassicRound(Question[] q, View ui, double currentscore) {
+        super(q, ui, currentscore);
     }
 
-    public void runRound() {
+    public double run() {
         for (Question q : roundQuestions) {
             ui.showQuestion(q);
-            if (q.checkRightAnswer(q.answers[ui.readAnswer() - 1])) {
-                System.out.println("Correct, You earned 1000 points"); //Mabe it will be to the interface
-                score +=1000.0;
-            } 
-            else { System.out.println("You answer is wrong!!!"); //Mabe it will be to the interface
+
+            int an = ui.readAnswer();
+            if (q.checkRightAnswer(q.getAnswers()[an - 1])) {
+                ui.showMessage("Correct, You earned 1000 points");
+                currentscore +=1000.0;
             }
-        }      
+            else ui.showMessage("Your answer is wrong!!!");
+        }
+        return currentscore;
     }
 }

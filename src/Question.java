@@ -1,10 +1,10 @@
 import java.util.*;
 
 public class Question {
-    protected final String question;
-    protected final String rightAnswer;
-    protected String[] answers;
-    protected String category;
+    private final String question;
+    private final String rightAnswer;
+    private String[] answers;
+    private String category;
 
     public Question(String question, String rightAnswer, String[] answers, String category) {
         this.question = question;
