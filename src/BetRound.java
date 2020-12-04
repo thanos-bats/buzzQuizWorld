@@ -7,13 +7,15 @@ public class BetRound extends Round {
     
     public BetRound(Question[] q, View ui) {
         super(q, ui);
-        checkIfIsRight();
+        runRound();
     }
 
-    public void checkIfIsRight() {
+    public void runRound() {
         for (Question q : roundQuestions) {
-            ui.showQuestion(q);
+            
             System.out.println("How many point do you want to bet? 250 , 500 , 750 , 1000");
+            
+            ui.showQuestion(q);
             
             Scanner sc = new Scanner(System.in);
             do {
@@ -28,10 +30,7 @@ public class BetRound extends Round {
             }
             System.out.println("You answer is wrong!!!"); 
         }      
-    }
-
-    
-    
+    }    
 }
     
 
