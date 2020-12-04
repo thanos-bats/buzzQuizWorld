@@ -1,3 +1,8 @@
+/* 
+*This Class implements a question
+*The question is consisted of a String which is the question, a String which is the answer , a String Array of the answers
+and a String for the cateory.
+*/
 import java.util.*;
 
 public class Question {
@@ -6,12 +11,13 @@ public class Question {
     private String[] answers;
     private String category;
 
+/*  The constructor of the class  */
     public Question(String question, String rightAnswer, String[] answers, String category) {
         this.question = question;
         this.rightAnswer = rightAnswer;
         this.answers  = answers;
     }
-
+/*  Getters function which @return the variables of the Question class  */ 
     public String getQuestion() { return this.question; }
 
     public String getRightAnswer() { return this.rightAnswer; }
@@ -25,5 +31,7 @@ public class Question {
 
     public String getCategory() { return this.category; }
 
+/*  The function which checks if the answer of player is the correct answer
+    @return boolean */
     public boolean checkRightAnswer(String answer) { return this.rightAnswer.equals(answer); }
 }
