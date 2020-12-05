@@ -29,7 +29,7 @@ public class Game {
         int gameRound = 0;
         Map<Integer, String> roundType = new HashMap<>();
         roundType.put (1, "ClassicRound");
-        roundType.put (2, "BetRound");
+           roundType.put (2, "BetRound");
         do {
             Random rn = new Random();
             int randint = Math.abs(rn.nextInt()) % (roundType.size());

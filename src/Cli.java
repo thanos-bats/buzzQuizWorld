@@ -1,6 +1,12 @@
+/**
+ * This Class imprements a Command Line interface 
+ * Cli contains functions for the user interface
+ */
+
 import java.util.Scanner;
 
 public class Cli implements View {
+/*  The constructor of the class */
     public Cli() {
         System.out.println("Hello, let's play Buzz!");
         //getNumOfPlayers();
@@ -18,6 +24,7 @@ public class Cli implements View {
         return num;
     } */
 
+/*  Class read answer recieve the answer from the user */
     @Override
     public int readAnswer() {
         Scanner sc = new Scanner(System.in);
@@ -33,6 +40,7 @@ public class Cli implements View {
         return an;
     }
 
+/*  Function showQuestion prints the questions to user */
     @Override
     public void showQuestion(Question q) {
         System.out.println(q.getCategory());
@@ -44,6 +52,8 @@ public class Cli implements View {
         }
     }
 
+
+/*  showMessage method displays messages to command line interface*/
     @Override
     public void showMessage(String message) {
         System.out.println(message);

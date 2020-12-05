@@ -1,12 +1,22 @@
+/**
+* This Class implements the Bet type of Rounds 
+*/
+
 import java.util.Scanner;
 
 public class BetRound extends Round {
 
+    /*The BetRound Constructor */
     public BetRound(Question[] q, View ui, double currentscore) {
         super(q, ui, currentscore);
         runRound();
     }
 
+/*
+*   Fuction runRound displays the round Questions and recieve the Player's answer
+*   Checks if the answer is correct and updates the score
+*   @return the Player's score
+*/
     public double runRound() {
         for (Question q : roundQuestions) {
             int bet;

@@ -1,7 +1,7 @@
-/* 
+/** 
 *This Class implements a question
 *The question is consisted of a String which is the question, a String which is the answer , a String Array of the answers
-and a String for the cateory.
+ and a String for the cateory.
 */
 import java.util.*;
 

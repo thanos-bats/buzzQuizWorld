@@ -1,6 +1,6 @@
-/* 
-   *Round Class implements a new Round of Questions
-   *Class accept as a definition an Array of Question, a View Ui and a variable integer for the current score
+/** 
+*Round Class implements a new Round of Questions
+*Class accept as a definition an Array of Question, a View Ui and a variable integer for the current score
  */
 
 public class Round {
@@ -9,6 +9,7 @@ public class Round {
     protected static View ui;
     protected static double currentscore;
     
+/*  Constructor of the class */
     public Round(Question[] q, View ui, double currentscore) {
         roundQuestions = q;
         Round.ui = ui;
