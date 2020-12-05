@@ -1,3 +1,8 @@
+/** Cli implements an Command line interface
+ * Cli's role is interacting with user 
+ */
+
+
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Scanner;
@@ -5,6 +10,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 public class Cli implements View {
+
 /*  The constructor of the class */
     public Cli() {
         //getNumOfPlayers();
@@ -22,13 +28,14 @@ public class Cli implements View {
         return num;
     } */
 
-/*  Class read answer recieve the answer from the user */
+/*  Displays message */
     @Override
     public void welcome(){
         System.out.println("Welcome");
         System.out.println("Hello, let's play Buzz!\n\n");
     }
 
+/*  Displays message */
     @Override
     public void betDetails() throws InterruptedException {
         System.out.println("Let's bet some points now.");
@@ -38,6 +45,7 @@ public class Cli implements View {
         this.sleep (3);
     }
 
+/*  Displays message */
     @Override
     public void classicDetails() throws InterruptedException {
         System.out.println("Let's play Classic Round.");
@@ -47,6 +55,7 @@ public class Cli implements View {
         this.sleep(3);
     }
 
+/*  Displays message */
     @Override
     public void worgAnswerMessage(double points) throws InterruptedException {
         System.out.println("Your answer is worg");
@@ -56,12 +65,14 @@ public class Cli implements View {
         this.sleep(2);
     }
 
+/*  Displays message */
     @Override
     public void correctAnswerMessage(double points) throws InterruptedException {
         System.out.println("Correct. You earned " + points + " points\n");
         this.sleep(2);
     }
 
+/*  Displays message */  
     @Override
     public void showBetValues(int[] values) {
         StringBuilder str = new StringBuilder ("How many points do you want to bet?");
@@ -72,6 +83,7 @@ public class Cli implements View {
         System.out.println(str);
     }
 
+/*  Displays message */
     @Override
     public void showScore(Player[] players) {
         for (Player p : players) {
@@ -79,6 +91,7 @@ public class Cli implements View {
         }
     }
 
+/*  Reads answer from the user and checks if it is valid */
     @Override
     public int readAnswer(Integer[] values) {
         Set<Integer> set = new HashSet<>(Arrays.asList(values));
@@ -96,7 +109,7 @@ public class Cli implements View {
         return an;
     }
 
-/*  Function showQuestion prints the questions to user */
+/*  Prints the questions to user */
     @Override
     public void showQuestion(Question q) throws InterruptedException {
         System.out.println("The category of answer is: " + q.getCategory());
@@ -112,7 +125,7 @@ public class Cli implements View {
     }
 
 
-    /*  showMessage method displays messages to command line interface*/
+/*  Delay for a specified amount of time */
     @Override
     public void sleep(int i) throws InterruptedException {
         TimeUnit.SECONDS.sleep(i);
