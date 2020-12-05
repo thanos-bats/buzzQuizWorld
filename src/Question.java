@@ -9,23 +9,28 @@ public class Question {
     private final String question;
     private final String rightAnswer;
     private String[] answers;
-    private String category;
+    private final String category;
 
 /*  The constructor of the class  */
     public Question(String question, String rightAnswer, String[] answers, String category) {
         this.question = question;
         this.rightAnswer = rightAnswer;
         this.answers  = answers;
+        this.category = category;
     }
 /*  Getters function which @return the variables of the Question class  */ 
     public String getQuestion() { return this.question; }
 
     public String getRightAnswer() { return this.rightAnswer; }
 
-    public String[] getAnswers() {
+    public String[] suffleAnswers() {
         List<String> strList = Arrays.asList(this.answers);
         Collections.shuffle(strList);
         this.answers = strList.toArray(new String[strList.size()]);
+        return this.answers;
+    }
+
+    public String[] getAnswers() {
         return this.answers;
     }
 
