@@ -1,10 +1,3 @@
-/**
- * This class implements a Player
- * @param id is the identity of Player
- * @param score is the pointes the player has recieved
- */
-
-
 public class Player {
     private final int id;
     private double score;
