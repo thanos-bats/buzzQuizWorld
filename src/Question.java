@@ -1,7 +1,10 @@
 /** 
 *This Class implements a question
-*The question is consisted of a String which is the question, a String which is the answer , a String Array of the answers
- and a String for the cateory.
+*The question is consisted of
+@param String question
+@param String rightAnswer
+@param String Array of answers
+@param String  cateory
 */
 import java.util.*;
 
@@ -18,22 +21,24 @@ public class Question {
         this.answers  = answers;
         this.category = category;
     }
-/*  Getters function which @return the variables of the Question class  */ 
+/*  @return a question  */ 
     public String getQuestion() { return this.question; }
-
+    
+/*  @return a answer */
     public String getRightAnswer() { return this.rightAnswer; }
-
+    
+/*  @return a answers in random order  */
     public String[] suffleAnswers() {
         List<String> strList = Arrays.asList(this.answers);
         Collections.shuffle(strList);
         this.answers = strList.toArray(new String[strList.size()]);
         return this.answers;
     }
-
+/*  @return answers */
     public String[] getAnswers() {
         return this.answers;
     }
-
+/* @return category */
     public String getCategory() { return this.category; }
 
 /*  The function which checks if the answer of player is the correct answer
