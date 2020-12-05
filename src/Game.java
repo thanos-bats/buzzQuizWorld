@@ -1,3 +1,7 @@
+/**
+ * Class Game is the class which performs Buzz Game
+ */
+
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
@@ -13,7 +17,7 @@ public class Game {
     private Player[] players;
     private Round[] rounds;
 
-
+/*  Constructor of the class inits the number of Players and an interface*/
     public Game(View ui) throws IOException {
         this.ui = ui;
         pool = new QuestionPool();
@@ -25,6 +29,10 @@ public class Game {
         play();
     }
 
+/*  Function play is the executable function for the Game
+    Function selects randomly the type of Round 
+    Initialize a QuestionPool 
+*/
     public void play() {
         int gameRound = 0;
         Map<Integer, String> roundType = new HashMap<>();
@@ -46,7 +54,7 @@ public class Game {
             gameRound++;
         } while (gameRound < numOfRounds);
     }
-
+/*  Funcrion addPlayer inits the players of the Game */
     public void addPlayers(int num) {
         for (int i = 0; i < num; i++) {
             this.players[i] = new Player(i);
