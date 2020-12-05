@@ -2,34 +2,31 @@ import java.util.Scanner;
 
 public class BetRound extends Round {
 
-    public BetRound(Question[] q, View ui, double currentscore) {
+    public BetRound(Question[] q, View ui, double currentscore) throws InterruptedException {
         super(q, ui, currentscore);
+        ui.betDetails();
         runRound();
     }
 
-    public double runRound() {
+    public void runRound() throws InterruptedException {
         for (Question q : roundQuestions) {
             int bet;
 
+            ui.showBetValues (new int[]{250, 500, 100});
+
+            bet = ui.readAnswer(new Integer[]{250, 500, 750, 1000});
+
             ui.showQuestion(q);
-            ui.showMessage("How many points do you want to bet? 250 , 500 , 750 , 1000");
 
-            Scanner sc = new Scanner(System.in);
-            do {
-                bet = sc.nextInt();
-            } while (bet != 250 && bet != 500 && bet != 750 && bet != 1000);
-
-            int an = ui.readAnswer();
+            int an = ui.readAnswer(new Integer[]{1, 2, 3, 4});
             if (q.checkRightAnswer(q.getAnswers()[an - 1])) {
-                ui.showMessage("Correct, You earned your bet points");
+                ui.correctAnswerMessage(bet);
                 currentscore += bet;
             }
             else {
-                ui.showMessage("You answer is wrong!!!");
+                ui.worgAnswerMessage(bet);
                 currentscore -= bet;
             }
         }
-
-        return currentscore;
     }
 }
