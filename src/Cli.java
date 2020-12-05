@@ -1,6 +1,7 @@
-/** Cli implements an Command line interface
- * Cli's role is interacting with user 
- */
+/** 
+*Cli implements an Command line interface
+*Cli's role is interacting with user 
+*/
 
 
 import java.util.Arrays;

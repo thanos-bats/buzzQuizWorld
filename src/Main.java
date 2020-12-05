@@ -1,3 +1,10 @@
+/** 
+*This program implements Buzz game 
+*@author Batsioulas
+*@author Pitsiavas
+*/
+
+
 import java.io.*;
 
 public class Main {

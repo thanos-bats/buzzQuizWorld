@@ -35,6 +35,7 @@ public class Game {
         play();
     }
 
+/*  Play method is the implementation of the game */    
     public void play() throws InterruptedException {
         int gameRound = 0;
 
