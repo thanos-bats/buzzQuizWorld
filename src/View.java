@@ -1,3 +1,6 @@
+/**
+ * View implements an interface
+ */
 public interface View {
 
     //public int getNumOfPlayers();
