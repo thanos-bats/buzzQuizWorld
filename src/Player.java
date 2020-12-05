@@ -12,4 +12,5 @@ public class Player {
     public void updateScore(double points) { this.score += points; }
     
     public double getScore() { return this.score; }
+    public int getId() { return this.id; }
 }
