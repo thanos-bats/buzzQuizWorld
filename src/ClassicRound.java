@@ -1,14 +1,17 @@
 /**
-* This class implements the first type of Round, when the correct Player's answer recieve 1000 points
+*This class implements the classic type of Round, when the correct Player's answer recieve 1000 points
+*@params inherits the Round class variables
 */
 public class ClassicRound extends Round {
 
+/*  The constructor */
     public ClassicRound(Question[] q, View ui, double currentscore) throws InterruptedException {
         super(q, ui, currentscore);
         ui.classicDetails();
         runRound();
     }
 
+/*  Main executable function for the Round */
     public void runRound() throws InterruptedException {
         for (Question q : roundQuestions) {
             ui.showQuestion(q);

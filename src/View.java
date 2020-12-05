@@ -1,9 +1,11 @@
 /**
- * View implements an interface
+ *View implements an interface
  */
 public interface View {
 
     //public int getNumOfPlayers();
+
+/*  These functions display messages   */    
     void welcome();
     void betDetails() throws InterruptedException;
     void classicDetails() throws InterruptedException;

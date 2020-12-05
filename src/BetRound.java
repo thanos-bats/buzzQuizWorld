@@ -1,15 +1,18 @@
 /**
-* This Class implements the Bet type of Rounds
+*This Class implements the Bet type of Rounds
+*@params inherits the Round class variables
 */
 
 public class BetRound extends Round {
 
+/*  The constructor */
     public BetRound(Question[] q, View ui, double currentscore) throws InterruptedException {
         super(q, ui, currentscore);
         ui.betDetails();
         runRound();
     }
 
+/*  Main executable function for the Round */
     public void runRound() throws InterruptedException {
         for (Question q : roundQuestions) {
             int bet;

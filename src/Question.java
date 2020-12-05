@@ -1,10 +1,10 @@
 /** 
 *This Class implements a question
 *The question is consisted of
-@param String question
-@param String rightAnswer
-@param String Array of answers
-@param String  cateory
+*@param String question
+*@param String rightAnswer
+*@param String Array of answers
+*@param String  cateory
 */
 import java.util.*;
 
@@ -14,7 +14,7 @@ public class Question {
     private String[] answers;
     private final String category;
 
-/*  The constructor of the class  */
+/*  The constructor */
     public Question(String question, String rightAnswer, String[] answers, String category) {
         this.question = question;
         this.rightAnswer = rightAnswer;
@@ -41,7 +41,7 @@ public class Question {
 /* @return category */
     public String getCategory() { return this.category; }
 
-/*  The function which checks if the answer of player is the correct answer
+/*  The function which checks if the answer is correct
     @return boolean */
     public boolean checkRightAnswer(String answer) { return this.rightAnswer.equals(answer); }
 }

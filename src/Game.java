@@ -1,5 +1,11 @@
 /**
- * Class Game is the class which performs Buzz Game
+ *Class Game is the class which performs Buzz Game
+ *@param numOfRounds
+ *@param numOfQuestions
+ *@param ui the interface
+ *@param pool of Questions
+ *@param players 
+ *@param rounds
  */
 
 import java.io.IOException;
@@ -16,7 +22,7 @@ public class Game {
     private Player[] players;
     private Round[] rounds;
 
-
+/*  The constructor */
     public Game(View ui) throws IOException, InterruptedException {
         this.ui = ui;
         ui.welcome();
@@ -37,7 +43,6 @@ public class Game {
         roundType.put (1, "BetRound");
         do {
             for(Player player : players) {
-                double roundScore = 0;
                 Random rn = new Random();
                 int randint = Math.abs (rn.nextInt()) % (roundType.size());
 
@@ -55,7 +60,7 @@ public class Game {
             gameRound++;
         } while (gameRound < numOfRounds);
     }
-/*  Funcrion addPlayer inits the players of the Game */
+/*  Function addPlayer inits the players of the Game */
     public void addPlayers(int num) {
         for (int i = 0; i < num; i++) {
             this.players[i] = new Player(i);

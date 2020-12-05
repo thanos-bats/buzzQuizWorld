@@ -1,6 +1,7 @@
 /**
-  *Class QuestionPool imprements a pool of Questions
-  *QuestionPool includes an Array of Question and inits it with the questions
+*Class QuestionPool imprements a pool of Questions
+*QuestionPool includes an Array of Question and inits it with the questions
+*@param pool Arrayslist of Questions
 */
 
 import java.io.*;
@@ -13,13 +14,13 @@ import java.util.Random;
 public class QuestionPool {
     private ArrayList<Question> pool;
 
-    /* Constructor of the Class */
+/*  The constructor */
     public QuestionPool() throws IOException {
         pool = new ArrayList<>();
         this.initPool();
     }
 
-    /*  InitPool is a function which fills the Question Array with questions from the external txt file */
+/*  InitPool is a function which fills the Question Array with questions from the external txt file */
     public void initPool() throws IOException {
         Path currentRelativePath = Paths.get("QuestionsFile.txt");
         File file = new File(currentRelativePath.toAbsolutePath().toString());
@@ -33,12 +34,12 @@ public class QuestionPool {
         }
     
     }
-    /*  @return the Arraylist of Question */
+/*  @return the Arraylist of Question */
     public ArrayList<Question> getPool() {
         return this.pool;
     }
 
-    /*  @return random Questions from the pool */
+/*  @return random Questions from the pool */
     public Question getRandomQuestion() {
         Question randomQ;
         Random rn = new Random();
@@ -48,7 +49,7 @@ public class QuestionPool {
         return randomQ;
     }
 
-    /*  @return an Question array with X Questions */
+/*  @return an Question array with X Questions */
     public Question[] getXQuestions(int num) {
         Question[] q = new Question[num];
         for (int i = 0; i < num; i++) {
@@ -57,7 +58,7 @@ public class QuestionPool {
         return  q;
     }
 
-    /* Deletes a Question from the pool */
+/*  Deletes a Question from the pool */
     public void deleteQuestion(int i) {
         this.pool.remove(i);
     }
