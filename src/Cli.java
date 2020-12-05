@@ -5,6 +5,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 public class Cli implements View {
+/*  The constructor of the class */
     public Cli() {
         //getNumOfPlayers();
     }
@@ -21,6 +22,7 @@ public class Cli implements View {
         return num;
     } */
 
+/*  Class read answer recieve the answer from the user */
     @Override
     public void welcome(){
         System.out.println("Welcome");
@@ -94,6 +96,7 @@ public class Cli implements View {
         return an;
     }
 
+/*  Function showQuestion prints the questions to user */
     @Override
     public void showQuestion(Question q) throws InterruptedException {
         System.out.println("The category of answer is: " + q.getCategory());
@@ -108,6 +111,8 @@ public class Cli implements View {
         }
     }
 
+
+    /*  showMessage method displays messages to command line interface*/
     @Override
     public void sleep(int i) throws InterruptedException {
         TimeUnit.SECONDS.sleep(i);

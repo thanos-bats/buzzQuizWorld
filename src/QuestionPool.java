@@ -1,4 +1,4 @@
-/* 
+/**
   *Class QuestionPool imprements a pool of Questions
   *QuestionPool includes an Array of Question and inits it with the questions
 */

@@ -1,4 +1,6 @@
-import java.util.Scanner;
+/**
+* This Class implements the Bet type of Rounds
+*/
 
 public class BetRound extends Round {
 

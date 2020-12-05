@@ -1,3 +1,6 @@
+/**
+* This class implements the first type of Round, when the correct Player's answer recieve 1000 points
+*/
 public class ClassicRound extends Round {
 
     public ClassicRound(Question[] q, View ui, double currentscore) throws InterruptedException {

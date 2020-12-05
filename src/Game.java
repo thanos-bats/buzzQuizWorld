@@ -1,3 +1,7 @@
+/**
+ * Class Game is the class which performs Buzz Game
+ */
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -51,7 +55,7 @@ public class Game {
             gameRound++;
         } while (gameRound < numOfRounds);
     }
-
+/*  Funcrion addPlayer inits the players of the Game */
     public void addPlayers(int num) {
         for (int i = 0; i < num; i++) {
             this.players[i] = new Player(i);
